@@ -1,0 +1,173 @@
+/*    src/styles/variables.css    */
+
+/* =============================
+   Light Theme Variables
+============================= */
+:root {
+  /* ===== Backgrounds ===== */
+  --bg-body: #f4f6f8;
+  --bg-container: #ffffff;
+  --bg-surface: #f1f3f5;
+  --bg-elevated: #f8fafc; 
+  --bg-input: #f3f4f6;
+
+  /* ===== Skeleton ===== */
+  --skeleton-bg: #e5e7eb;
+  --skeleton-shimmer: #f3f4f6;
+
+  /* ===== Primary Color ===== */
+  --color-primary: #2563eb;
+  --color-logo: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-disabled: #93c5fd;
+  --color-primary-soft: #dbeafe;
+
+  /* ===== Buttons ===== */
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-hover: var(--color-primary-hover);
+  --btn-primary-disabled: var(--color-primary-disabled);
+  --btn-primary-text: #ffffff;
+
+  --btn-secondary-bg: #e5e7eb;
+  --btn-secondary-hover: #d1d5db;
+  --btn-secondary-disabled: #f3f4f6;
+  --btn-secondary-text: #111827;
+
+  /* ===== Text ===== */
+  --text-main: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-input: var(--text-main);
+
+  /* ===== Status Colors ===== */
+  --color-error: #dc2626;
+  --color-error-soft: #fee2e2;
+
+  --color-success: #16a34a;
+  --color-success-soft: #dcfce7;
+
+  --color-warning: #d97706;
+  --color-warning-soft: #fef3c7;
+
+  --color-info: #0284c7;
+  --color-info-soft: #e0f2fe;
+
+  /* ===== Skeleton ===== */
+  --skeleton-bg: #e5e7eb;
+  --skeleton-shimmer: #f3f4f6;
+
+  /* ===== Border ===== */
+  --border-color: #d1d5db;
+  --border-input-color: #d1d5dc;
+
+  /* ===== Shadows ===== */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.12);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  /* ===== Radius ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* ===== Transition ===== */
+  --transition-fast: 0.2s ease;
+
+  /* اسم الخط */
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Animations */
+    --animate-moveRight: moveRight 1s ease-in-out infinite;
+    --animate-spinSlow: spinSlow 2.8s linear forwards;
+    --animate-moveTopAndBottom: moveTopAndBottom 5s linear infinite;
+    --animate-moveModel: moveModel 0.8s 1;
+    --animate-moveCard: moveCard 0.8s 1;
+    --animate-shadowPulse: shadowPulse 3s ease-in-out infinite;
+    --animate-fadeIn: fadeIn 0.4s ease forwards;
+    --animate-slideDownFadeIn : slideDownFadeIn 0.7s ease forwards;
+    --animate-slideUpFadeOut : slideUpFadeOut 0.4s ease forwards;
+    --animate-fadeOut : fadeOut 0.4s ease forwards;
+    --animate-fadeInUp : fadeInUp 0.5s ease forwards;
+    --animate-shimmer: shimmer 2s infinite linear;
+}
+
+/* =============================
+   Dark Theme Variables
+============================= */
+.dark {
+  /* ===== Backgrounds ===== */
+  --bg-body: #0f172a;
+  --bg-container: #020617; /* 020617 */
+  --bg-surface: #1e293b;  /* 1e293b */
+  --bg-elevated: #243042;  
+  --bg-input: #27272a;  
+
+  /* ===== Skeleton ===== */
+  --skeleton-bg: #1e293b;
+  --skeleton-shimmer: #334155;
+
+  /* ===== Primary Color ===== */
+  --color-primary: #38bdf8;
+  --color-primary-hover: #0ea5e9;
+  --color-primary-disabled: #075985;
+  --color-primary-soft: #0b3b5c; /* 082f49 */
+
+  /* ===== Buttons ===== */
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-hover: var(--color-primary-hover);
+  --btn-primary-disabled: var(--color-primary-disabled);
+  --btn-primary-text: #020617;
+
+  --btn-secondary-bg: #334155;
+  --btn-secondary-hover: #475569;
+  --btn-secondary-disabled: #1e293b;
+  --btn-secondary-text: #e5e7eb;
+  --btn-secondary-text-disabled: #64748b;
+
+  /* ===== Text ===== */
+  --text-main: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-input: var(--text-main);
+
+  /* ===== Status Colors ===== */
+  --color-error: #f87171;
+  --color-error-soft: #450a0a;
+
+  --color-success: #4ade80;
+  --color-success-soft: #052e16;
+
+  --color-warning: #facc15;
+  --color-warning-soft: #422006;
+
+  --color-info: #38bdf8;
+  --color-info-soft: #082f49;
+
+  /* ===== Skeleton ===== */
+  --skeleton-bg: #1e293b;
+  --skeleton-shimmer: #334155;
+
+  /* ===== Border ===== */
+  --border-color: #334155;
+  --border-input-color: #3f3f46;
+
+  /* ===== Shadows ===== */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --shadow-inner: inset 0 2px 6px rgba(255, 255, 255, 0.05);
+
+  /* ===== Radius ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* ===== Transition ===== */
+  --transition-fast: 0.2s ease;
+}
+
+html[lang ="ar"] {
+  /* اسم الخط */
+  --font-poppins: "Cairo", sans-serif;
+}

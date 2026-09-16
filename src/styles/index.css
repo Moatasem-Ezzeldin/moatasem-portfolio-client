@@ -1,0 +1,12 @@
+/*    src/styles/index.css    */
+@import "tailwindcss";
+@import "./base.css";
+@import "./theme.css";
+@import "./utilities.css";
+@import "./variables.css";
+@import "./layout.css";
+@import "./components.css";
+@import "./keyframes.css";
+
+/* to applay class dark or light */
+@custom-variant dark (&:where(.dark, .dark *));

@@ -1,0 +1,98 @@
+/*    src/styles/theme.css    */
+
+@import "./variables.css";
+@import './keyframes.css';
+
+@theme {
+  /* Start screen */
+    --breakpoint-*: initial;
+    --breakpoint-sm: 567px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+  /* End screen */
+  /* Stert fonts */
+    --font-poppins: var(--font-poppins);
+  /* End fonts */
+  /* Start colors */
+    /* ===== Backgrounds ===== */
+    --color-body: var(--bg-body);
+    --color-container: var(--bg-container);
+    --color-surface: var(--bg-surface);
+    --color-elevated: var(--bg-elevated);
+    --color-input: var(--bg-input);
+
+    /* ===== Skeleton ===== */
+    --color-skeleton-bg: var(--skeleton-bg);
+    --color-skeleton-shimmer: var(--skeleton-shimmer);
+
+    /* ===== Primary Color ===== */
+    --color-primary: var(--color-primary);
+    --color-logo: var(--color-logo);
+    --color-primary-hover: var(--color-primary-hover);
+    --color-primary-disabled: var(--color-primary-disabled);
+    --color-primary-soft: var(--color-primary-soft);
+
+    /* ===== Buttons ===== */
+    /* primary */
+    --color-btn-primary-bg: var(--btn-primary-bg);
+    --color-btn-primary-hover: var(--btn-primary-hover);
+    --color-btn-primary-disabled: var(--btn-primary-disabled);
+    --color-btn-primary-text: var(--btn-primary-text);
+    /* secondary */
+    --color-btn-secondary-bg: var(--btn-secondary-bg);
+    --color-btn-secondary-hover: var(--btn-secondary-hover);
+    --color-btn-secondary-disabled: var(--btn-secondary-disabled);
+    --color-btn-secondary-text: var(--btn-secondary-text);
+
+    /* ===== Text ===== */
+    --color-title: var(--text-main);
+    --color-subtitle: var(--text-secondary);
+    --color-muted: var(--text-muted);
+    --color-input-text: var(--text-input);
+
+    /* ===== Status Colors ===== */
+    --color-error: var(--color-error);
+    --color-error-soft: var(--color-error-soft);
+
+    --color-success: var(--color-success);
+    --color-success-soft: var(--color-success-soft);
+
+    --color-warning: var(--color-warning);
+    --color-warning-soft: var(--color-warning-soft);
+
+    --color-info: var(--color-info);
+    --color-info-soft: var(--color-info-soft);
+
+    /* ===== Skeleton ===== */
+    --color-skeleton-bg: var(--skeleton-bg);
+    --color-skeleton-shimmer: var(--skeleton-shimmer);
+
+    /* ===== Border ===== */
+    --color-border: var(--border-color);
+    --color-input-border: var(--border-input-color);
+  /* End colors */
+
+  /* Start shadow */
+    --shadow-sm: var(--shadow-sm);
+    --shadow-md: var(--shadow-md);
+    --shadow-lg: var(--shadow-lg);
+    --shadow-inner: var(--shadow-inner);
+  /* End shadow */
+
+  /* Start Animations */
+    --animate-moveRight: var(--animate-moveRight);
+    --animate-spinSlow: var(--animate-spinSlow);
+    --animate-moveTopAndBottom: var(--animate-moveTopAndBottom);
+    --animate-moveModel: var(--animate-moveModel);
+    --animate-moveCard: var(--animate-moveCard);
+    --animate-shadowPulse: var(--animate-shadowPulse);
+    --animate-fadeIn: var(--animate-fadeIn);
+    --animate-slideDownFadeIn : var(--animate-slideDownFadeIn);
+    --animate-slideUpFadeOut : var(--animate-slideUpFadeOut);
+    --animate-fadeOut : var(--animate-fadeOut);
+    --animate-fadeInUp : var(--animate-fadeInUp);
+    --animate-shimmer : var(--animate-shimmer);
+  /* End Animations */
+}

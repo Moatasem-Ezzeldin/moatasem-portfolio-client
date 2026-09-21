@@ -1,8 +1,8 @@
-
+import AppRouter from "./routes/AppRouter";
 const App = () => {
   return (
-    <div className="text-primary">App</div>
-  )
-}
+    <AppRouter />
+  );
+};
 
-export default App
+export default App;

@@ -2,7 +2,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import { MainLayout, DashboardLayout, AuthLayout } from "../layouts/index";
 
 import { 
-    Landing, ErrorPage, NotFoundPage, Login, Overview
+    Landing, ErrorPage, NotFoundPage, Login, Overview,
 } from "../pages/index";
 
 const router = createBrowserRouter([

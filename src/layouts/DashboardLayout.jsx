@@ -1,3 +1,4 @@
+import { dashboardLayoutData } from "../data/index";
 import Topbar from "./ui/Topbar";
 import Sidebar from "./ui/Sidebar";
 import {Overlay, ConfirmModal} from "../components/index";
@@ -28,22 +29,31 @@ const DashboardLayout = () => {
   const toggleSubMenu = (id) => {
     setOpenMenu((prev) => (prev === id ? null : id));
   };
-  const links = navigation[language][role];
+  // All Props
+  const propsSidebar = {
+    links: navigation[language][role], open, openMenu, toggleMobileMenu, toggleSubMenu, scrollActive, setScrollActive,
+    user, isAuthenticated: isAuth, handleOpenLogoutModal, isDark, toggleTheme, isEnglish, isArabic, toggleLanguage,
+    language,  sidebarData: dashboardLayoutData[language]?.sidebar,  
+  };
+  const propsTopbar = {
+    open, toggleMobileMenu, user, isAuth, isEnglish, topbarData: dashboardLayoutData[language]?.topbar,
+    handleOpenLogoutModal,
+  };
+  const propsConfirmModal = {
+    modal: confirmModal,
+    onClose: handleCloseConfirmModal,
+    isLoading: confirmModalLoading,
+    error: confirmModalError,
+    isEnglish,
+  };
   return (
     <div className='flex h-screen '>
-        <Sidebar links={links} open={open} openMenu={openMenu} toggleMobileMenu={toggleMobileMenu} 
-            toggleSubMenu={toggleSubMenu} scrollActive={scrollActive} setScrollActive={setScrollActive}
-            user={user} isAuthenticated={isAuth} handleOpenLogoutModal={handleOpenLogoutModal}
-            isDark={isDark} toggleTheme={toggleTheme} isEnglish={isEnglish} isArabic={isArabic} toggleLanguage={toggleLanguage}
-            language={language}
-          />
+        <Sidebar {...propsSidebar} />
         <div className="flex flex-col flex-1 relative">
             <Overlay open={open} onClick={toggleMobileMenu} />
-            <Topbar open={open} toggleMobileMenu={toggleMobileMenu} user={user} isAuth={isAuth} isEnglish={isEnglish}/>
+            <Topbar {...propsTopbar} />
             <MainOutlet className={"flex-1 overflow-y-auto px-4 py-6 md:px-6 lg:px-8 lg:py-8 bg-container"} />
-            <ConfirmModal modal={confirmModal} onClose={handleCloseConfirmModal} 
-                isLoading={confirmModalLoading} error={confirmModalError} isEnglish={isEnglish}
-            />
+            <ConfirmModal {...propsConfirmModal} />
         </div>
     </div>
   )

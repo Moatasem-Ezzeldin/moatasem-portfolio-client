@@ -1,23 +1,20 @@
 import Logo from "./Logo";
-import { User, LogOut, PanelLeftClose, Sun, Moon } from "lucide-react";
-import { useTheme } from "../../hooks/useTheme";
-import { useLanguage } from "../../hooks/useLanguage";
+import { User, LogOut, PanelLeftClose, Sun, Moon, Download } from "lucide-react";
 import { SidebarNavItem } from "./NavItem";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/index";
 
 const MobileNav = ({ links, open, openMenu, toggleMobileMenu, toggleSubMenu, scrollActive, setScrollActive, 
-  user, isAuthenticated, handleOpenLogoutModal
+  user, isAuthenticated, handleOpenLogoutModal, logoData, toggleLanguage, isArabic, toggleTheme, isDark,
+  language, isEnglish,
 }) => {
   const navigate = useNavigate();
-  const { toggleTheme, isDark } = useTheme();
-  const { toggleLanguage, isArabic, isEnglish, language } = useLanguage();
   const handleGoProfile = () => {
     navigate("/dashboard/profile");
   };
   return (
     <aside 
-      className={`h-screen bg-surface flex flex-col z-49 fixed duration-300 ltr:left-0 rtl:right-0 
+      className={`h-screen bg-surface flex flex-col z-50 fixed duration-300 ltr:left-0 rtl:right-0 
       top-0 md:hidden transition-transform ease-in-out w-60 shadow-md 
       ${open ? "translate-x-0" : "ltr:-translate-x-full rtl:translate-x-full"}`}
     >
@@ -36,7 +33,7 @@ const MobileNav = ({ links, open, openMenu, toggleMobileMenu, toggleSubMenu, scr
             }
           `}
         >
-          <Logo />
+          <Logo logoData={logoData}/>
         </div>
         <PanelLeftClose 
           onClick={toggleMobileMenu}
@@ -154,6 +151,20 @@ const MobileNav = ({ links, open, openMenu, toggleMobileMenu, toggleSubMenu, scr
             {isArabic ? "ع" : "AR"}
           </span>
         </button>
+        <Button 
+          variant="primary"
+          href="/files/Moatasem-Ezzeldin-SV.pdf"
+          download="Moatasem-Ezzeldin-SV.pdf"
+          className="
+            w-full h-9 px-3
+            rounded-md text-sm
+            flex items-center gap-2 justify-center
+            cursor-pointer
+          "
+        >
+          <Download size={16} />
+          {isArabic ? "تحميل CV" : "Download CV"}
+        </Button>
       </div>
       {/* Footer */}
       {isAuthenticated &&

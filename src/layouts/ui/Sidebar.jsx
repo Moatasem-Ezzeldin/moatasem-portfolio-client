@@ -6,7 +6,8 @@ import { Button, Tooltip } from "../../components/index";
 import { useState } from "react";
 
 const Sidebar = ({ links, open, openMenu, toggleMobileMenu, toggleSubMenu, scrollActive, setScrollActive,
-    handleOpenLogoutModal, user, isAuthenticated, isArabic, isEnglish, toggleLanguage, toggleTheme, isDark, language
+    handleOpenLogoutModal, user, isAuthenticated, isArabic, isEnglish, toggleLanguage, toggleTheme, isDark, language,
+    sidebarData,
  }) => {
     const [tooltip, setTooltip] = useState(null);
     const navigate = useNavigate();
@@ -46,7 +47,7 @@ const Sidebar = ({ links, open, openMenu, toggleMobileMenu, toggleSubMenu, scrol
                         }
                     `}
                 >
-                    <Logo />
+                    <Logo logoData={sidebarData.logo} />
                 </div>
                 <PanelLeftClose onClick={toggleMobileMenu}
                     className={`w-6 h-6 text-subtitle hover:text-title transition-transform duration-300 cursor-pointer

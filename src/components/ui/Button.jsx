@@ -11,6 +11,7 @@ const variants = {
 const baseClasses = "inline-flex justify-center items-center gap-2 transition-colors duration-300 ease-in-out border border-border cursor-pointer select-none disabled:cursor-not-allowed disabled:pointer-events-none";
 
 const Button = ({ children, variant= "primary", className = "", to, scrollTo, href, onClick, disabled = false, type = "button",  
+    download, target, rel,
 }) => {
     const classes = `${baseClasses} ${variants[variant]} ${className}`;
     if(to) {
@@ -39,8 +40,9 @@ const Button = ({ children, variant= "primary", className = "", to, scrollTo, hr
         return (
             <a
                 href={href}
-                target="_blank"
-                rel="noreferrer noopener"
+                download={download}
+                target={target}
+                rel={rel}
                 className={`${classes}`}
             >
                 { children }

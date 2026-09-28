@@ -1,8 +1,7 @@
-import logo from "../../assets/images/logo.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const Logo = ({ auth = false, isEnglish, className="" }) => {
+const Logo = ({ logoData, auth = false, className="" }) => {
   const navigate = useNavigate();
   const [clickCount, setClickCount] = useState(0);
 
@@ -20,22 +19,22 @@ const Logo = ({ auth = false, isEnglish, className="" }) => {
   return (
     <div 
       onClick={handleLogoClick}
-      className={`flex items-center cursor-pointer ${auth ? "flex-col gap-0.5" : "gap-2"} ${className}`}
+      className={`flex items-center cursor-pointer ${auth ? "flex-col gap-0.5" : ""} ${className}`}
     >
       <img 
         className={`${auth ? "h-9 w-9" : "h-7 w-7"}`} 
-        src={logo} 
+        src={logoData.logo} 
         alt="Logo" 
       />
       <div 
         className={` ${auth ? "text-center" : "hidden md:block"}`}
       >
-        <h1 className={`font-semibold text-logo ${auth ? "text-lg" : "text-lg"}`}>
-          {isEnglish ? "Moatasem Ezzeldin" : "معتصم عز الدين"}
+        <h1 className={`font-semibold text-logo ${auth ? "text-lg" : "hidden"}`}>
+          {logoData.name}
         </h1>
         {auth &&
           <p className="text-xs text-primary/60">
-            {isEnglish ? "Secure • Simple • Reliable" : "موثوق • بسيط • محمي"}
+            {logoData.authText}
           </p>
         }
       </div>
@@ -43,4 +42,4 @@ const Logo = ({ auth = false, isEnglish, className="" }) => {
   )
 }
 
-export default Logo
+export default Logo;

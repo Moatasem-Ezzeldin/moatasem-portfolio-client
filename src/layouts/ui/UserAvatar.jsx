@@ -1,17 +1,12 @@
-import { Dropdown, Button, ConfirmModal } from "../../components/index";
+import { Dropdown, Button } from "../../components/index";
 import { useState, useEffect, useRef } from "react";
 import { User, LogOut } from "lucide-react";
-import { useModal } from "../../hooks/useModal";
 import { useNavigate } from "react-router-dom";
 
-const UserAvatar = ({ user=null, isEnglish, language }) => {
+const UserAvatar = ({ user=null, isEnglish, language, handleOpenLogoutModal }) => {
     const [open, setOpen] = useState(false);
     const navigate = useNavigate();
     const menuRef = useRef(null);
-    const { 
-        confirmModal, handleCloseConfirmModal, handleOpenLogoutModal, 
-        confirmModalLoading,  confirmModalError,
-    } = useModal();
     const handleToggleMenu = () => {
         setOpen((priv) => !priv);
     };
@@ -115,9 +110,6 @@ const UserAvatar = ({ user=null, isEnglish, language }) => {
                     </div>
                 </div>
             </Dropdown>
-            <ConfirmModal modal={confirmModal} onClose={handleCloseConfirmModal} 
-                isLoading={confirmModalLoading} error={confirmModalError} isEnglish={isEnglish}
-            />
         </div>
     )
 }

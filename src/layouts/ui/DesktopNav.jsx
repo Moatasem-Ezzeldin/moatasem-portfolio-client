@@ -8,7 +8,7 @@ const DesktopNav = ({ links, openMenu, toggleSubMenu, scrollActive, setScrollAct
   const showLabel = true; // if you need icon only set showLabel = false
 
   return (
-    <nav className={`hidden md:flex items-center gap-4`}>
+    <nav className={`hidden md:flex items-center gap-4 `}>
       {mainLinks.length > 0 &&
         mainLinks.map((link) => (
           <DesktopNavItem key={link.id} item={link} scrollActive={scrollActive} open={showLabel}

@@ -1,9 +1,10 @@
 import { MainOutlet, Logo } from "./ui/index";
 import { useLanguage } from "../hooks/useLanguage";
+import { authLayoutData } from "../data/index"
 
 const AuthLayout = () => {
-  const { isEnglish } = useLanguage();
-
+  const { isEnglish, language } = useLanguage();
+  const authData = authLayoutData[language]
   return (
     <div
       className="
@@ -171,10 +172,10 @@ const AuthLayout = () => {
       </div>
       {/* ================= Auth Card ================= */}
       <div
-        className="relativez-10 w-full max-w-md rounded-2xl ring-1 ring-primary/10
+        className="relative z-10 w-full max-w-md rounded-2xl ring-1 ring-primary/10
         border border-primary/20 bg-transparent p-4 backdrop-blur-xl sm:p-5 md:p-6"
       >
-        <Logo auth={true} isEnglish={isEnglish} className="mb-6" />
+        <Logo auth={true} isEnglish={isEnglish} className="mb-6" logoData={authData?.logo} />
         <MainOutlet className="w-full" />
       </div>
     </div>

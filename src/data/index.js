@@ -3,6 +3,7 @@ export {default as mainLayoutData} from './mainData/mainLayoutData';
     // Landing
 export {default as heroData} from './mainData/landingData/heroData';
 export {default as aboutData} from './mainData/landingData/aboutData';
+export {default as skillsData} from './mainData/landingData/skillsData';
 
 // Auth Data
 export {default as authLayoutData} from './authData/authLayoutData';

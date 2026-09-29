@@ -39,17 +39,22 @@ const About = ({ aboutData, name }) => {
                     ease: [0.22, 1, 0.36, 1],
                 }}
                 key={index} 
-                className="bg-surface p-5 md:p-6 rounded-lg group"
+                className="bg-surface p-5 md:p-6 rounded-lg group border border-border
+                transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary/40 hover:shadow-sm"
               >
                 <div className="mb-2 flex items-center gap-2">
-                <Icon 
-                  className="text-primary transition-transform duration-300 group-hover:scale-110 text-center" 
-                  size={22} 
-                  strokeWidth={2} 
-                />
-                <h3 className=" text-lg text-primary/75">{item.title}</h3>
+                  <Icon 
+                    className="text-primary transition-transform duration-300 group-hover:scale-110 text-center" 
+                    size={22} 
+                    strokeWidth={2} 
+                  />
+                  <h3 className=" text-lg text-primary/75 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
                 </div>
-                <p className="text-sm leading-6 text-muted">{item.description}</p>
+                <p className="text-sm leading-6 text-muted transition-colors duration-300 group-hover:text-subtitle">
+                  {item.description}
+                </p>
               </motion.div>
             );
           })}

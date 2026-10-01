@@ -50,19 +50,5 @@
   background-color: #6b7280;
 }
 
-input,
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-text-fill-color: var(--text-input) !important;
-
-  /* نفس لون الخلفية تبعك */
-  -webkit-box-shadow: 0 0 0px 1000px var(--bg-input) inset !important;
-  box-shadow: 0 0 0px 1000px var(--bg-input) inset !important;
-  border-radius: 6px !important;
-  border: 1px solid var(--border-input-color) !important;
-
-}
 
 }

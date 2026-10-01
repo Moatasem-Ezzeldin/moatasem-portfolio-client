@@ -4,6 +4,7 @@ export {default as mainLayoutData} from './mainData/mainLayoutData';
 export {default as heroData} from './mainData/landingData/heroData';
 export {default as aboutData} from './mainData/landingData/aboutData';
 export {default as skillsData} from './mainData/landingData/skillsData';
+export {default as projectsData} from './mainData/landingData/projectsData';
 
 // Auth Data
 export {default as authLayoutData} from './authData/authLayoutData';

@@ -61,8 +61,8 @@ const Header = ({
                     <div className="h-9 rounded-2xl overflow-clip hidden md:block">
                         <Button 
                             variant="primary"
-                            href="/files/Moatasem-Ezzeldin-SV.pdf"
-                            download="Moatasem-Ezzeldin-SV.pdf"
+                            href="/Moatasem-Ezzeldin-CV.pdf"
+                            download="Moatasem-Ezzeldin-CV.pdf"
                             className="h-full w-full px-4 inline-flex justify-center items-center text-sm rounded-2xl" 
                         >
                             {isArabic ? "تحميل CV" : "Download CV"}

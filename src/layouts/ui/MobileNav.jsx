@@ -153,8 +153,8 @@ const MobileNav = ({ links, open, openMenu, toggleMobileMenu, toggleSubMenu, scr
         </button>
         <Button 
           variant="primary"
-          href="/files/Moatasem-Ezzeldin-SV.pdf"
-          download="Moatasem-Ezzeldin-SV.pdf"
+          href="/Moatasem-Ezzeldin-CV.pdf"
+          download="Moatasem-Ezzeldin-CV.pdf"
           className="
             w-full h-9 px-3
             rounded-md text-sm

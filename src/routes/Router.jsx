@@ -2,7 +2,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import { MainLayout, DashboardLayout, AuthLayout } from "../layouts/index";
 
 import { 
-    Landing, ErrorPage, NotFoundPage, Login, Overview,
+    Landing, ErrorPage, NotFoundPage, Login, Overview, Project,
 } from "../pages/index";
 
 const router = createBrowserRouter([
@@ -28,6 +28,11 @@ const router = createBrowserRouter([
                     { index: true, element: <Navigate to="login" replace /> },
                     { path: "login", element: <Login /> },
                 ],
+            },      
+            // 2) Project
+            {
+                path: "/projects/:slug",
+                element: <Project/>,
             },
             // 3) Dashboard
             {

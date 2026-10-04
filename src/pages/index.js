@@ -11,3 +11,7 @@ export {default as Login} from './authPages/Login';
 
 // Dashboard Pages
 export {default as Overview} from './dashboardPages/Overview';
+
+
+// Project Pages
+export {default as Project} from './projectPage/Project';

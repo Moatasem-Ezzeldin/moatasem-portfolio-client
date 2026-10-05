@@ -55,7 +55,7 @@ export const projectApi = api.injectEndpoints({
 
         // ================= SINGLE PROJECT BY SLUG =================
         getProjectBySlug: builder.query({
-            query: (slug) => `/projects/${slug}`,
+            query: (slug) => `/projects/slug/${slug}`,
 
             providesTags: (result, error, slug) => [
                 { type: "Projects", id: slug },

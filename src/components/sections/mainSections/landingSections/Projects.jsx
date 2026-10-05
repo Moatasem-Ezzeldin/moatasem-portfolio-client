@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Projects = ({ projectsData, name, language }) => {
     const [page, setPage] = useState(1);
-    const limit = 8;
+    const limit = 4;
     const [keyword, setKeyword] = useState("");
     const [activeCategory, setActiveCategory] = useState("")
     const { data: dataProjects, isLoading: isLoadingProjects, isError: isErrorProjects } 

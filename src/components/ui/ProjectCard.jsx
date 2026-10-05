@@ -10,7 +10,7 @@ const ProjectCard = ({ project, language }) => {
   return (
     <motion.div 
       className="relative overflow-hidden rounded-2xl border border-border transition-all
-        duration-300 ease-out hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-sm"
+        duration-300 bg-elevated ease-out hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-sm"
       initial={{
           opacity: 0,
           y: 40,
@@ -36,11 +36,11 @@ const ProjectCard = ({ project, language }) => {
         className="w-full h-56 aspect-video transition-transform duration-500 hover:scale-105"
       />
       <div className="p-5 bg-elevated">
-        <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
-          <h1 className="text-lg font-semibold text-title mb-2">{project.title[language]}</h1>
-          <span className="px-2.5 py-1.25 bg-primary/10 text-primary text-xs rounded-full font-medium">
+        <div className="flex flex-col gap-2.5 mb-3">
+          <span className="px-2.5 py-1.25 bg-primary/10 w-fit text-primary text-xs rounded-full font-medium">
             {project.category.name[language]}
           </span>
+          <h1 className="text-lg font-semibold text-title mb-2">{project.title[language]}</h1>
         </div>
         <div className="flex flex-col gap-2">
           <Button

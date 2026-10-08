@@ -1,5 +1,5 @@
-import { Container, SectionTitle } from "../../../../components/index"
-import { motion } from "motion/react";
+import { Container, SectionTitle, BaseCard } from "../../../../components/index"
+
 const About = ({ aboutData, name }) => {
   return (
     <div name={name} className="bg-body border-t border-border py-10 min-h-screen">
@@ -8,8 +8,8 @@ const About = ({ aboutData, name }) => {
       <div className="flex flex-col gap-8 xl:flex-row lg:justify-between xl:gap-16 items-stretch">
         {/* left */}
         <div 
-          className="w-full xl:w-[40%] rounded-2xl bg-surface border border-border p-5 md:p-6 
-           flex flex-col gap-2"
+          className="w-full xl:w-[40%] rounded-2xl bg-container/15 border border-border/80 p-5 md:p-6 
+           flex flex-col gap-2 shadow-md"
         >
           <h3 className="text-title font-semibold text-md">{aboutData.subtitle}</h3>
           <p className="text-subtitle font-medium text-base leading-relaxed flex-1">{aboutData.description}</p> 
@@ -19,28 +19,10 @@ const About = ({ aboutData, name }) => {
           {aboutData.r.map((item, index) => {
             const Icon = item.icon;
             return (
-              <motion.div 
-                initial={{
-                    opacity: 0,
-                    y: 40,
-                    scale: 0.96,
-                }}
-                whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    scale: 1,
-                }}
-                viewport={{
-                    once: true,
-                    amount: 0.25,
-                }}
-                transition={{
-                    duration: 0.6,
-                    ease: [0.22, 1, 0.36, 1],
-                }}
+              <BaseCard 
                 key={index} 
-                className="bg-surface p-5 md:p-6 rounded-lg group border border-border
-                transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary/40 hover:shadow-sm"
+                className="bg-surface/80 p-5 md:p-6 rounded-lg group border border-input-border shadow-sm
+                 hover:-translate-y-1 hover:border-primary/40 hover:shadow-primary-sm"
               >
                 <div className="mb-2 flex items-center gap-2">
                   <Icon 
@@ -55,7 +37,7 @@ const About = ({ aboutData, name }) => {
                 <p className="text-sm leading-6 text-muted transition-colors duration-300 group-hover:text-subtitle">
                   {item.description}
                 </p>
-              </motion.div>
+              </BaseCard>
             );
           })}
         </div>

@@ -1,6 +1,6 @@
 import {useLanguage} from "../../hooks/useLanguage"
-import { Hero, About, Skills, Projects } from "../../components/sections/index";
-import { heroData, aboutData, skillsData, projectsData } from "../../data/index";
+import { Hero, About, Skills, Projects, Contact } from "../../components/sections/index";
+import { heroData, aboutData, skillsData, projectsData, contactData } from "../../data/index";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
@@ -29,6 +29,7 @@ const Landing = () => {
       <About aboutData={aboutData[language]} name="about" />
       <Skills skillsData={skillsData[language]} name="skills" />
       <Projects projectsData={projectsData[language]} name="projects" language={language} />
+      <Contact contactData={contactData[language]} name="contact" language={language} />
     </>
   )
 }

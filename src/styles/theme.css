@@ -21,6 +21,7 @@
     --color-container: var(--bg-container);
     --color-surface: var(--bg-surface);
     --color-elevated: var(--bg-elevated);
+    --color-form: var(--bg-form);
     --color-input: var(--bg-input);
 
     /* ===== Skeleton ===== */
@@ -78,7 +79,13 @@
     --shadow-sm: var(--shadow-sm);
     --shadow-md: var(--shadow-md);
     --shadow-lg: var(--shadow-lg);
+    --shadow-xl: var(--shadow-xl);
     --shadow-inner: var(--shadow-inner);
+
+    --shadow-primary-sm: var(--shadow-primary-sm);
+    --shadow-primary-md: var(--shadow-primary-md);
+    --shadow-primary-lg: var(--shadow-primary-lg);
+    --shadow-primary-xl: var(--shadow-primary-xl);
   /* End shadow */
 
   /* Start Animations */

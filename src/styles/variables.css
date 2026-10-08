@@ -9,7 +9,9 @@
   --bg-container: #ffffff;
   --bg-surface: #f1f3f5;
   --bg-elevated: #f8fafc; 
-  --bg-input: #f3f4f6;
+  --bg-form: #ffffff; 
+  --bg-contact: #f8fafc;
+  --bg-input: #f1f5f9;
 
   /* ===== Skeleton ===== */
   --skeleton-bg: #e5e7eb;
@@ -37,7 +39,7 @@
   --text-main: #111827;
   --text-secondary: #6b7280;
   --text-muted: #9ca3af;
-  --text-input: var(--text-main);
+  --text-input: #111827;
 
   /* ===== Status Colors ===== */
   --color-error: #dc2626;
@@ -58,13 +60,23 @@
 
   /* ===== Border ===== */
   --border-color: #d1d5db;
-  --border-input-color: #d1d5dc;
+  --border-input-color: #cbd5e1;
 
   /* ===== Shadows ===== */
+    /* Normal Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  /* Inner Shadow */
   --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  /* Primary Shadows */
+  --shadow-primary-sm: 0 2px 8px rgba(37, 99, 235, 0.12);
+  --shadow-primary-md: 0 8px 20px rgba(37, 99, 235, 0.16);
+  --shadow-primary-lg: 0 16px 35px rgba(37, 99, 235, 0.20);
+  --shadow-primary-xl: 0 24px 50px rgba(37, 99, 235, 0.24);
 
   /* ===== Radius ===== */
   --radius-sm: 6px;
@@ -101,7 +113,9 @@
   --bg-container: #020617; /* 020617 */
   --bg-surface: #1e293b;  /* 1e293b */
   --bg-elevated: #243042;  
-  --bg-input: #27272a;  
+  --bg-form: #1e293b;  
+  --bg-contact: #243042;  
+  --bg-input: #0f172a;  
 
   /* ===== Skeleton ===== */
   --skeleton-bg: #1e293b;
@@ -129,7 +143,7 @@
   --text-main: #e5e7eb;
   --text-secondary: #9ca3af;
   --text-muted: #6b7280;
-  --text-input: var(--text-main);
+  --text-input: #e5e7eb;
 
   /* ===== Status Colors ===== */
   --color-error: #f87171;
@@ -150,13 +164,22 @@
 
   /* ===== Border ===== */
   --border-color: #334155;
-  --border-input-color: #3f3f46;
+  --border-input-color: #334155;
 
   /* ===== Shadows ===== */
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+  /* Normal Shadows */
+  --shadow-sm: 0 2px 6px rgba(255, 255, 255, 0.04);
+  --shadow-md: 0 8px 20px rgba(255, 255, 255, 0.06);
+  --shadow-lg: 0 16px 35px rgba(255, 255, 255, 0.08);
+  --shadow-xl: 0 24px 50px rgba(255, 255, 255, 0.10);
+
   --shadow-inner: inset 0 2px 6px rgba(255, 255, 255, 0.05);
+
+  --shadow-primary-sm: 0 2px 8px rgba(56, 189, 248, 0.12);
+  --shadow-primary-md: 0 8px 20px rgba(56, 189, 248, 0.16);
+  --shadow-primary-lg: 0 16px 35px rgba(56, 189, 248, 0.20);
+  --shadow-primary-xl: 0 24px 50px rgba(56, 189, 248, 0.24);
 
   /* ===== Radius ===== */
   --radius-sm: 6px;

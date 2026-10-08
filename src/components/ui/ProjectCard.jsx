@@ -1,4 +1,5 @@
 import Button from "./Button"
+import BaseCard from "./BaseCard"
 import {
     ExternalLink,
     Eye,
@@ -8,27 +9,9 @@ import { motion } from "motion/react";
 const ProjectCard = ({ project, language }) => {
 
   return (
-    <motion.div 
-      className="relative overflow-hidden rounded-2xl border border-border transition-all
-        duration-300 bg-elevated ease-out hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-sm"
-      initial={{
-          opacity: 0,
-          y: 40,
-          scale: 0.96,
-      }}
-      whileInView={{
-          opacity: 1,
-          y: 0,
-          scale: 1,
-      }}
-      viewport={{
-          once: true,
-          amount: 0.25,
-      }}
-      transition={{
-          duration: 0.6,
-          ease: [0.22, 1, 0.36, 1],
-      }}
+    <BaseCard 
+      className="relative overflow-hidden rounded-2xl border border-border shadow-md
+      bg-elevated/80 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-primary-md"
     >
       <img 
         src={project.image.url} 
@@ -66,7 +49,7 @@ const ProjectCard = ({ project, language }) => {
           </Button>
         </div>
       </div>
-    </motion.div >  
+    </BaseCard >  
   )
 }
 

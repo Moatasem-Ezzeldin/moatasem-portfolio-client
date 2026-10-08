@@ -1,5 +1,4 @@
-import { Container, SectionTitle } from "../../../../components/index"
-import { motion } from "motion/react";
+import { Container, SectionTitle, BaseCard } from "../../../../components/index"
 
 const Skills = ({ skillsData, name }) => {
   return (
@@ -10,28 +9,10 @@ const Skills = ({ skillsData, name }) => {
         {skillsData.m.map((item, index) => {
             const Icon = item.icon;
             return(
-                <motion.div  
+                <BaseCard  
                     key={index} 
-                    className="group bg-surface p-5 md:p-6 rounded-2xl border border-border 
-                    transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-sm"
-                    initial={{
-                        opacity: 0,
-                        y: 40,
-                        scale: 0.96,
-                    }}
-                    whileInView={{
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                    }}
-                    viewport={{
-                        once: true,
-                        amount: 0.25,
-                    }}
-                    transition={{
-                        duration: 0.6,
-                        ease: [0.22, 1, 0.36, 1],
-                    }}
+                    className="group bg-surface/80 p-5 md:p-6 rounded-2xl border border-border shadow-md
+                    hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-primary-md"
                 >
                     <div className="mb-4 flex items-center gap-2">
                         <Icon 
@@ -54,7 +35,7 @@ const Skills = ({ skillsData, name }) => {
                             </span>
                         ))}
                     </div>
-                </motion.div >
+                </BaseCard >
             )
         })}
       </div>

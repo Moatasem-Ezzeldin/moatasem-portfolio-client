@@ -5,7 +5,7 @@ import App from './App.jsx';
 import {store} from "./redux/store.js";
 import { Provider } from "react-redux";
 
-const savedTheme = localStorage.getItem("theme") || "light";
+const savedTheme = localStorage.getItem("theme") || "dark";
 const savedLanguage = localStorage.getItem("language") || "en";
 const direction = savedLanguage === "ar" ? "rtl" : "ltr";
 const root = document.documentElement;

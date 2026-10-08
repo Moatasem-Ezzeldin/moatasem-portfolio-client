@@ -170,19 +170,12 @@ const Hero = ({ heroData, name, isEnglish }) => {
                 <div className="">
                     {/* info */}
                     <div className="">
-                        <motion.h1 
-                            className=" text-3xl lg:text-4xl font-bold ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-title 
-                            via-title to-primary bg-[length:200%_100%] bg-clip-text text-transparent "
-                            initial={false} 
-                            animate={{
-                            backgroundPosition: isEnglish
-                                ? ["200% 0%", "-200% 0%"]   // LTR
-                                : ["-200% 0%", "200% 0%"],   // RTL
-                            }} 
-                            transition={{ duration: 16, ease: "linear", }}
+                        <h1 
+                            className=" text-3xl lg:text-4xl font-bold text-title"
+                           
                         >
                             {heroData.name} 
-                        </motion.h1>
+                        </h1>
 
                         <h2 className="text-subtitle text-xl lg:text-2xl font-semibold mt-2">
                             {heroData.bio}
@@ -238,19 +231,8 @@ const Hero = ({ heroData, name, isEnglish }) => {
                 {/* Avater */}
                 <div className="relative flex items-center justify-center">
                     {/* 🔥 Blue Fire Ring */}
-                    <motion.div
-                        className="
-                            absolute
-                            -inset-5
-                            md:-inset-6
-                            rounded-full
-                        "
-                        animate={{rotate:360}}
-                        transition={{
-                            duration: 7,
-                            repeat: Infinity,
-                            ease: "linear",
-                        }}
+                    <div
+                        className="absolute -inset-5  md:-inset-6 rounded-full "
                     >
                         <svg
                             viewBox="0 0 300 300"
@@ -380,7 +362,7 @@ const Hero = ({ heroData, name, isEnglish }) => {
                             />
 
                         </svg>
-                    </motion.div>
+                    </div>
                     <div
                         className="
                             relative

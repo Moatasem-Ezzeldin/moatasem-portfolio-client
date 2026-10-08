@@ -1,30 +1,10 @@
 import { Container, Button } from "../../../index";
 import { FaFacebook, FaGithub, FaLinkedin} from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import {
-    motion,
-    useAnimationFrame,
-    useMotionValue,
-} from "motion/react";
-import { useEffect, useRef } from "react";
+import { motion } from "motion/react";
 
 const Hero = ({ heroData, name, isEnglish }) => {
-    const rotation = useMotionValue(0);
 
-    const directionRef = useRef(isEnglish ? 1 : -1);
-
-    useEffect(() => {
-        directionRef.current = isEnglish ? 1 : -1;
-    }, [isEnglish]);
-
-    useAnimationFrame((_, delta) => {
-        const speed = 360 / 7000;
-
-        rotation.set(
-            rotation.get() +
-            directionRef.current * speed * delta
-        );
-    });
   return (
     <div
         name={name}
@@ -192,13 +172,14 @@ const Hero = ({ heroData, name, isEnglish }) => {
                     <div className="">
                         <motion.h1 
                             className=" text-3xl lg:text-4xl font-bold ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-title 
-                            via-title to-primary bg-[length:200%_100%] bg-clip-text text-transparent " 
+                            via-title to-primary bg-[length:200%_100%] bg-clip-text text-transparent "
+                            initial={false} 
                             animate={{
                             backgroundPosition: isEnglish
                                 ? ["200% 0%", "-200% 0%"]   // LTR
                                 : ["-200% 0%", "200% 0%"],   // RTL
                             }} 
-                            transition={{ duration: 16, repeat: Infinity, ease: "linear", }}
+                            transition={{ duration: 16, ease: "linear", }}
                         >
                             {heroData.name} 
                         </motion.h1>
@@ -264,7 +245,12 @@ const Hero = ({ heroData, name, isEnglish }) => {
                             md:-inset-6
                             rounded-full
                         "
-                        style={{rotate: rotation}}
+                        animate={{rotate:360}}
+                        transition={{
+                            duration: 7,
+                            repeat: Infinity,
+                            ease: "linear",
+                        }}
                     >
                         <svg
                             viewBox="0 0 300 300"

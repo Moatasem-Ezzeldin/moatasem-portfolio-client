@@ -43,7 +43,7 @@ const InputField = ( {
         placeholder={placeholder}
         disabled={disabled}
         className={`w-full px-4 py-3 rounded-md outline-none disabled:opacity-40
-          bg-input placeholder-subtitle text-title text-base leading-6`}  
+          bg-input text-input-text text-base leading-6`}  
         />
         {password && 
           <button

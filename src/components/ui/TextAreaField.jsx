@@ -52,7 +52,7 @@ const TextAreaField = ({
           }}
           placeholder={placeholder}
           className="w-full px-4 py-3 rounded-md outline-none resize-none
-          bg-input placeholder-subtitle text-input-text text-base
+          bg-input text-input-text text-base
           leading-6 min-h-26 overflow-y-auto"
         />
       </div>
